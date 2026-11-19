@@ -1,20 +1,97 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ประวัติส่วนตัว</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ประวัติส่วนตัว</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 16px;
+      min-height: 100vh;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+      background-size: 200% 200%;
+      animation: bgMove 10s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      width: 100%;
+      max-width: 720px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      animation: fadeUp 0.7s ease;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 2rem;
+      color: #2d2a4a;
+      border-bottom: 3px solid #764ba2;
+      padding-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 24px;
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+      color: #5b3cc4;
+    }
+
+    p {
+      margin: 8px 0;
+      padding: 12px 16px;
+      background: #f8f7ff;
+      border-left: 4px solid #764ba2;
+      border-radius: 8px;
+      color: #333;
+      line-height: 1.6;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    p:hover {
+      transform: translateX(6px);
+      background: #efeaff;
+      box-shadow: 0 6px 16px rgba(118, 75, 162, 0.15);
+    }
+  </style>
 </head>
 <body>
-
+  <div class="container">
     <h1>ประวัติส่วนตัว</h1>
 
     <h2>ข้อมูลส่วนตัว</h2>
-    <p>ชื่อ-นามสกุล: จิตติมา หาวุฒิ</p>
-    <p>ชื่อเล่น:วุ้นเส้น</p>
-    <p>วันเดือนปีเกิด:01/04/2550</p>
-    <p>อายุ:19</p>
+    <p>ชื่อ-นามสกุล: จิตติมา หาญวุฒิ</p>
+    <p>ชื่อเล่น: วุ้นเส้น</p>
+    <p>วันเดือนปีเกิด: 01/04/2550</p>
+    <p>อายุ: 19</p>
     <p>ที่อยู่: 552 หมู่ 6 ซ.นกแก้ว ถ.ท้ายบ้าน ต.ท้ายบ้าน อ.เมือง จ.สมุทรปราการ 10270</p>
 
     <h2>ความสามารถพิเศษ</h2>
@@ -25,6 +102,6 @@
 
     <h2>ความในจุย</h2>
     <p>ใจดีครับ แต่ปากแข็งครับ สอนดีครับ แต่ชอบแกล้งครับ</p>
-
+  </div>
 </body>
 </html>
